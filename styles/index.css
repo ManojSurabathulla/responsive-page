@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  background: var(--bgPageColor);
+}
+
+:root {
+  font-size: 10px;
+  --primaryColor:#007af3;
+  --bgWhite: #FFFFFF;
+  --textColor: #000000;
+  --bgPageColor: #f2f2f2;
+  --listsBgColor: #20272E;
+  --authorImage: #006BD6;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.navbar {
+  padding: 1em;
+  background-color: var(--bgWhite);
+}
+
+.navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar .container .logo {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--textColor);
+  font-size: 1.8em;
+  font-family: 'Poppins';
+}
+
+.navbar .container .logo span {
+  color: var(--primaryColor);
+}
+
+.navbar nav {
+  display: none;
+}
+
+.nitty-section {
+  padding: 5em 2em;
+  text-align: center;
+}
+
+.nitty-section .content p {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: gray;
+  letter-spacing: .3em;
+  font-family: 'Poppins';
+  font-size: 1.4em;
+}
+
+.nitty-section .content h1 {
+  font-size: 3.0em;
+  line-height: 1.3em;
+  margin: .5em;
+}
+
+.nitty-section .content .nitty-links {
+  text-align: center;
+}
+
+.nitty-section .content .nitty-links .try-free {
+  display: inline-block;
+  padding: 0.6em 1.3em;
+  border: 1px solid;
+  color: var(--bgWhite);
+  background: var(--primaryColor);
+  text-decoration: none;
+  font-size: 1.8em;
+  font-family: 'Poppins';
+  font-weight: bold;
+  border-radius: 5em;
+}
+
+.nitty-section .content .nitty-links .watch-video {
+  display: block;
+  margin-top: 1.2em;
+}
+
+.nitty-section .content .nitty-links .watch-video img {
+  margin-right: 0.5em;
+}
+
+.nitty-section .content .nitty-links a {
+  color: var(--textColor);
+  font-size: 1.8em;
+  font-weight: normal;
+  font-family: 'Poppins';
+}
+
+.nitty-section .nitty-img {
+  width: 70%;
+  padding-top: 3em;
+}
+
+section {
+  padding: 8em 4em;
+}
+
+section.features {
+  background: var(--listsBgColor);
+  color: var(--bgWhite);
+}
+
+section.features .features-lists {
+  margin: 0;
+  padding-left: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(32rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+}
+
+section.features .features-lists li {
+  font-size: 1.1em;
+  margin-bottom: 2em;
+  margin-left: 3em;
+}
+
+section.features .features-lists li::before {
+  content: '';
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  background-image: url("../images/bullet.svg");
+  left: 2em;
+  background-size: contain;
+  margin-right: 0.5em;
+}
+
+.features img {
+  display: none;
+}
+
+.after {
+  overflow: unset;
+}
+
+.author-section {
+  background-color: var(--primaryColor);
+  color: var(--bgWhite);
+  text-align: center;
+  padding: 5em 0 5em 0;
+}
+
+.author-section .card-parent {
+  background: var(--primaryColor);
+  padding: 5rem 1rem;
+  overflow: unset;
+}
+
+.author-section .card-parent .card {
+  overflow: unset;
+  border: 1px solid var(--authorImage);
+  width: 80%;
+  margin: 0 auto 5em auto;
+  font-size: 1.6em;
+  position: relative;
+  padding: 3em 1em;
+  background: var(--authorImage);
+}
+
+.author-section .card-parent .card .author-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: -20%;
+  left: 0;
+}
+
+.author-section .card-parent .card img {
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  border: 0.5em solid var(--authorImage);
+}
+
+.author-section .card-parent .card blockquote {
+  font-size: 1.7rem;
+  padding: 1rem 2.5rem;
+}
+
+.contact-section .contact h2 {
+  font-weight: 700;
+  font-size: 2em;
+  margin: 1em auto;
+}
+
+.contact-section .contact label {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: .5em;
+}
+
+.contact-section .contact input, .contact-section .contact textarea {
+  width: 100%;
+  margin-bottom: 1.5em;
+  padding: .5em 0em;
+}
+
+.contact-section .contact .send-message-btn {
+  width: unset;
+  color: var(--bgWhite);
+  background: var(--authorImage);
+  border: none;
+  border-radius: 50px;
+  padding: 1em 2em;
+}
+
+.contact-section iframe {
+  width: 100%;
+  height: 30em;
+}
+
+@media only screen and (min-width: 930px) {
+  .navbar nav {
+    display: block;
+  }
+  .navbar .mobile-menu {
+    display: none;
+  }
+  .nitty-section .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .nitty-section .container .nitty-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nitty-section .container .nitty-links .try-free, .nitty-section .container .nitty-links .watch-video {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .nitty-section .container .nitty-img {
+    width: 40%;
+  }
+  .author-section .card-parent {
+    padding: 30px 60px 0px 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+  }
+  .contact-section .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 40px;
+  }
+  .contact-section .container .contact {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .contact-section .container .map {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+/*# sourceMappingURL=index.css.map */
